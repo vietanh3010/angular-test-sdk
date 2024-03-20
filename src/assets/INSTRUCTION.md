@@ -14,7 +14,7 @@ App demo: https://ekyc.fpt.ai/sdk/demo
 
 1. Add script and css files to the header
 ```javascript
-<script type="text/javascript" src="sdk.js"></script>
+<script type="module" src="sdk.js"></script>
 <link rel="stylesheet" href="sdk.css"/>
 ```
 
@@ -29,7 +29,6 @@ public/
         +--animations/
         +--images/
         +--models/
-        +--facemesh-solutions/
 ```
 
 3. Default theme config
