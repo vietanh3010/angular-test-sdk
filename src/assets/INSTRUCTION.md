@@ -103,17 +103,21 @@ type OptionType = {
     endpoint_init_session: EndpointType,
      /**
      * Config endpoint url and headers for 'ocr' API.
+     * default form_names is ["files", "files"]
      * type EndpointType = {
      *      url: string,
-     *      headers: Record<string, string>
+     *      headers: Record<string, string>,
+     *      form_names?: [string, string]
      * }
      */
     endpoint_ocr: EndpointType,
      /**
      * Config endpoint url and headers for 'liveness' API.
+     * default form_names is ["cmnd", "video"]
      * type EndpointType = {
      *      url: string,
-     *      headers: Record<string, string>
+     *      headers: Record<string, string>,
+     *      form_names?: [string, string]
      * }
      */
     endpoint_liveness: EndpointType,
@@ -160,7 +164,9 @@ type OptionType = {
      *
      * type SdkResult = {
      *      "ocrResult": Record<string, string>,
+     *      "livenessFiles": File[],
      *      "livenessResult": Record<string, Record<string, string>>
+     *      "ocrFiles": File[],
      * }
      */
     on_result?: (data: SdkResult) => void,
