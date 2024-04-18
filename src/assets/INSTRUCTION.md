@@ -57,6 +57,8 @@ ekyc.setTheme({
         "fci_live_err_message_color": "#d84647",
         "fci_live_err_content_color": "#d84647",
         "fci_live_err_bg_content_color": "#ffebee",
+        "fci_action_step_bg": "#00ba00",
+        "fci_action_step_line_color": "#BCBCBE",
     },
     "text": {
         "en": {
@@ -71,7 +73,10 @@ ekyc.setTheme({
             "kyc_nfc_title": "Put your phone over the document",
             "let_s_try_again": "Let's try that again",
             "kyc_no_success": "Ekyc failed",
-            "kyc_try_again": "Try again"
+            "kyc_try_again": "Try again",
+            "step_ocr": "Ocr",
+            "step_selfie": "Selfie",
+            "step_review": "Review",
         },
         "vi": {
             "please_choose_kyc": "Vui lòng chọn loại eKYC",
@@ -85,7 +90,10 @@ ekyc.setTheme({
             "kyc_nfc_title": "Đặt điện thoại của bạn lên trên chip phía sau CCCD",
             "let_s_try_again": "Hãy Thử Lại",
             "kyc_no_success": "Ekyc thất bại",
-            "kyc_try_again": "Thử Lại"
+            "kyc_try_again": "Thử Lại",
+            "step_ocr": "Xác thực",
+            "step_selfie": "Quay video",
+            "step_review": "Kiểm tra",
         }
     }
 })
@@ -190,6 +198,13 @@ type OptionType = {
      * default: window.origin
      */
     asset_base_path?: string,
+     /*
+     * Auto ocr capture (experimental)
+     *
+     * default: false
+     */
+    auto_capture?: boolean,
+
 }
 
 function ekyc.init(options: OptionType)
