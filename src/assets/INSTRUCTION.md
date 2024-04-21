@@ -204,7 +204,13 @@ type OptionType = {
      * default: false
      */
     auto_capture?: boolean,
-
+     /*
+     * Camera will be auto focused at a given distance (experimental)
+     * Value will be ranged from 0 to 1;
+     * Set to undefined value will turn this off
+     * default: 0.31
+     */
+    ocr_focus_value?: boolean,
 }
 
 function ekyc.init(options: OptionType)
